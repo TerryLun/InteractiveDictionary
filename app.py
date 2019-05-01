@@ -20,4 +20,12 @@ def lookUp(word):
 
 word = input("Enter word: ")
 
-print(lookUp(word))
+output = lookUp(word)
+
+if type(output) == list:
+    index = 1
+    for item in output:
+        print(str(index) + ". " + item)
+        index += 1
+else:
+    print(output)
